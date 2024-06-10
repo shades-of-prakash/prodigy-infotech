@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+			* {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+				font-family: "Sora", sans-serif;
+			}
+			body {
+				height: 100dvh;
+				margin: 0;
+				background-color: black;
+			}
+			body::-webkit-scrollbar {
+				display: none;
+			}
+			.main {
+				height: 100dvh;
+				display: flex;
+			}
+			.login_image {
+				width: 50%;
+				height: inherit;
+			}
+			.login_image img {
+				width: 100%;
+				object-fit: cover;
+				object-position: top;
+				height: inherit;
+			}
+			.login_form {
+				width: 50%;
+				height: inherit;
+				background-color: rgba(255, 255, 255, 0.11);
+				backdrop-filter: blur(20px);
+				padding: 50px 0;
+			}
+			.title {
+				margin: 24px;
+				color: white;
+				font-size: 50px;
+				text-align: center;
+			}
+			.user_mes {
+				text-align: center;
+				text-align: center;
+				color: white;
+				font-size: 12px;
+				font-weight: 100;
+			}
+			.input_box {
+				display: flex;
+				flex-direction: column;
+				padding: 10px 40px;
+			}
+			.input_box label {
+				font-size: 24px;
+				color: white;
+				margin-bottom: 12px;
+			}
+			.input_box input {
+				background-color: transparent;
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				padding: 15px;
+				caret-color: white;
+				cursor: pointer;
+				color: white;
+			}
+
+			.check {
+				display: flex;
+				justify-content: space-between;
+				padding: 16px 40px;
+				color: rgba(255, 255, 255, 0.647);
+				font-weight: 100;
+				font-size: smaller;
+			}
+			button {
+				width: calc(100% - 80px);
+				margin: 24px 40px;
+				padding: 15px;
+				font-size: 18px;
+				color: white;
+				background-color: rgba(255, 255, 255, 0.11);
+				border: 1px solid rgba(255, 255, 255, 0.1);
+				border-radius: 50px;
+			}
+			.flex {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+			}
+			.login_sub {
+				width: 100%;
+				padding: 0px 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main">
+			<div class="login_image">
+				<img
+					src="./assets/lance-reis-N2gzYjsyNEY-unsplash.jpg"
+					alt=""
+					srcset=""
+				/>
+			</div>
+			<form class="login_form flex" action="/responsive/signup.html">
+				<div class="login_sub">
+					<h1 class="title">Shades</h1>
+					<p class="user_mes">Welcome, User! We're glad to see you back.</p>
+					<div class="input_box">
+						<label for="">Email</label>
+						<input type="text" placeholder="Email" />
+					</div>
+					<div class="input_box">
+						<label for="">Password</label>
+						<input type="passsword" placeholder="Password" />
+					</div>
+					<div class="check">
+						<p style="display: flex; align-items: center; gap: 4px">
+							<input type="checkbox" />Remember me
+						</p>
+						<p>Forgot password?</p>
+					</div>
+					<button>Signup</button>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
