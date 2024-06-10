@@ -83,7 +83,7 @@ function computerPlay() {
 restart.addEventListener("click", () => {
 	currentPlayer = "X";
 	gameOver = false; // Reset gameOver
-	winner.textContent = "";
+	winner.style.display = "none";
 	cells.forEach((cell) => {
 		cell.textContent = "";
 	});
