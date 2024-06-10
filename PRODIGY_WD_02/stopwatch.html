@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="index.css" />
+	</head>
+	<body class="flex">
+		<p class="title">STOPWATCH</p>
+		<div class="stopwatch">
+			<div class="display">
+				<div class="card flex" id="hours">00</div>
+				<span class="flex">:</span>
+				<div class="card flex" id="minutes">00</div>
+				<span class="flex">:</span>
+				<div class="card flex" id="seconds">00</div>
+				<span class="flex">:</span>
+				<div class="card flex" id="milliseconds">00</div>
+			</div>
+			<div id="error"></div>
+			<div class="buttons">
+				<button class="start button" onclick="start()">Start</button>
+				<button class="pause button" onclick="stop()">Pause</button>
+				<button class="reset button" onclick="reset()">Reset</button>
+				<button class="lap button" onclick="recordLap()">Lap</button>
+			</div>
+			<ul id="lapTimes"></ul>
+		</div>
+		<script src="./index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+body{
+    height: 100dvh;
+    background-color: black;
+    background-image: url('./assets/img-3.jpg');
+    background-size: cover;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.stopwatch{
+    width:500px;
+    /* height:400px; */
+    background-color: rgba(250, 249, 246);
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* border-radius: 10px; */
+}
+.title{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:black;
+    font-size:100px;
+    background-color: rgb(0 ,120, 215);
+    padding:9px;
+}
+.display{
+    width:calc(100% - 30px);
+    display: flex;
+    justify-content: space-between;
+}
+#error{
+    margin-top:30px;
+    color:#a50e0e;
+    background-color: #FCE8E6;
+    border-radius: 10px;
+    padding:5px 10px;
+    display: none;
+}
+.card{
+    width:80px;
+    height: 80px;
+    font-size:40px;
+    border:1px solid black;
+    border-radius: 0.5rem;
+}
+.display span{
+    font-size: 40px;
+}
+
+.buttons{
+    width:calc(100% - 30px);
+    margin-top:30px;
+    display: flex;
+}
+.button{
+    width:100%;
+    padding:10px 15px;
+    outline: none;
+    border:none;
+    font-size: 20px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    border-radius:0.5rem;
+}
+button:not(:last-child){
+    margin-right:10px;
+}
+.start{
+    background-color:rgb(204, 235, 212);
+    color:rgb(17, 78, 38);
+}
+.start:hover{
+    background-color:rgb(162, 235, 180);
+}
+.pause{
+    background-color: #FCE8E6;
+    color:#a50e0e;
+}
+.pause:hover{
+    background-color: #febeb9;
+}
+.reset{
+    background-color: #E8F1FD;
+    color:#0b50b8;
+}
+.reset:hover{
+    background-color: #bdd7fb;
+}
+
+#lapTimes {
+    width:100%;
+    padding:10px;
+}
+#lapTimes  li{
+    width:100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    padding:10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
