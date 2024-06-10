@@ -1,0 +1,192 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    color: black;
+}
+.flex{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+body{
+    height: 100dvh;
+}
+.main_weather{
+    width:350px;
+    height: inherit;
+}
+.search_weather{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    border:1px solid rgba(0, 0, 0,0.4);
+    border-radius: 4px;
+    overflow:hidden;
+}
+.title,label{
+    margin-bottom: 24px;
+    text-align: center;
+}
+.search_weather input{
+    width:100%;
+    height:36px;
+    border:none;
+    outline:none;
+    padding:10px;
+    font-size: 20px;
+    background-color: transparent;
+    color: black;
+    caret-color:black;
+}
+.search_weather input::placeholder{
+    color:grey;
+    font-size: 14px;
+}
+.search_weather i{
+    padding:5.5px;
+    font-size:25px;
+    color:rgb(255, 255, 255);
+    background-color: black;
+}
+#display_weather{
+    width:100%;
+    height:350px;
+    background-color: transparent;
+    border:1px solid rgba(0, 0, 0,0.4);
+    border-radius: 15px;
+    padding:20px;
+    position: relative;
+}
+.normal{
+    display:flex;
+    width:inherit;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+.normal p{
+    font-size: 18px;
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.normal img{
+    width:150px;
+}
+#after_fetching{
+    display: none;
+}
+#error_handling{
+    width:inherit;
+    height:320px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding:10px;
+}
+#error_handling img{
+    width:150px;
+    margin-bottom:32px;
+}
+#error_handling p{
+    font-size:16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align:center;
+}
+.city{
+    display: flex;
+    justify-content: space-between;
+}
+.temperature{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:10px;
+}
+.temperature .temp{
+    font-size:80px;
+    margin:12px 0;
+    /* color: white; */
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.weather_content{
+    display: flex;
+}
+.props{
+    width:50%;
+    display: flex;
+    align-items: flex-start;
+    justify-content:center;
+    flex-direction: column;
+}
+.prop{
+    width:100px;
+    display: flex;
+    align-items: center;
+    font-size:20px;
+    padding-top:6px;
+}
+
+.weather_image{
+    width:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weather_image img{
+    width:70%;
+}
+.current_weather{
+    height: 400px;
+    width:400px;
+    border:1px solid rgba(0,0,0,0.4);
+    padding:20px;
+}
+.current_weather h1{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size:20px;
+    margin-bottom:16px;
+}
+.current_weather h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 14px;
+    font-weight:400;
+    margin-bottom: 16px;
+    background-color: rgba(0, 0, 0,0.1);
+    color:black;
+    border-radius: 8px;
+    padding:10px 8px;
+}
+.weather_details  .box{
+    border-bottom: 1px solid rgba(0, 0, 0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding:10px 0;
+}
+.weather_details  .box .conditions{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+}
+.weather_details  .box .conditions img{
+    width:25px;
+}
+.box:last-child{
+    border: none;
+}
+.current_weather .city_name{
+font-size: 24px;
+font-weight:600;
+font-family: monospace;
+}

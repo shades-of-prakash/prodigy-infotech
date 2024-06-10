@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="index.css" />
+		<link
+			href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+			rel="stylesheet"
+		/>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		></script>
+	</head>
+	<body class="flex">
+		<div class="wrapper">
+			<h1 class="title">Weather App</h1>
+			<div class="flex" style="gap: 24px; margin-top: 24px">
+				<div class="current_weather">
+					<h1>Weather at your Location</h1>
+					<h3>Please allow us to use your location for better service.</h3>
+					<div class="flex" style="margin: 12px">
+						<p style="padding: 10px">City:</p>
+						<p class="city_name">fetching...</p>
+					</div>
+					<div class="weather_details">
+						<div class="box">
+							<p>Temperature</p>
+							<span class="cu-te">fetching...</span>
+						</div>
+						<div class="box">
+							<p>Condition</p>
+							<div class="conditions">
+								<img src="./assets/clouds.png" alt="" class="cu-img" />
+								<span class="cu-co">fetching...</span>
+							</div>
+						</div>
+						<div class="box">
+							<p>humidity</p>
+							<span class="cu-hum">fetching...</span>
+						</div>
+						<div class="box">
+							<p>Wind Speed</p>
+							<span class="cu-ws">fetching...</span>
+						</div>
+						<div class="box">
+							<p>Description</p>
+							<span class="cu-des">fetching...</span>
+						</div>
+					</div>
+				</div>
+				<div class="main_weather">
+					<div class="search_weather">
+						<input type="text" placeholder="Enter city name" id="input" />
+						<i class="bx bx-search" id="search"></i>
+					</div>
+					<div id="display_weather">
+						<div id="before_fetching" class="normal">
+							<img
+								src="./assets/weather_icon.png"
+								alt="weather_icon"
+								class="be-img"
+							/>
+							<p class="be-p">
+								After fetching the weather of your requested city,the details
+								are displayed here
+							</p>
+						</div>
+						<div id="after_fetching">
+							<div class="city">
+								<p>City: <span id="city">${city}</span></p>
+								<p id="time">${date}</p>
+							</div>
+							<div class="temperature">
+								<p class="temp" id="temp">69c</p>
+								<p id="condition">${weather_condition}</p>
+							</div>
+							<div class="weather_content">
+								<div class="props">
+									<div class="prop">
+										<i class="bx bx-wind"></i>
+										<p class="wind_speed" id="wind_speed">${wind_speed}</p>
+									</div>
+									<div class="prop">
+										<i class="bx bxs-droplet"></i>
+										<p class="humidity" id="humidity">${humidity}</p>
+									</div>
+									<div class="prop">
+										<i class="bx bxs-sun"></i>
+										<p class="wind_speed" id="feelslike">${feels_like}</p>
+									</div>
+								</div>
+								<div class="weather_image">
+									<img src="" alt="weather-image" id="image" />
+								</div>
+							</div>
+						</div>
+						<div id="error_handling" style="display: none">
+							<img src="./assets/404.jpg" alt="404" />
+							<p>
+								Cloud not fetch the city you entered please check the city name
+								once!
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="index.js" type="module"></script>
+</html>
